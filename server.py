@@ -13,6 +13,11 @@ def home():
     now = datetime.datetime.now()
     return render_template('home.html', current_time=now.ctime())
 
+@app.route('/ilkan')
+def info_page():
+    now = datetime.datetime.now()
+    return render_template('info.html', current_time=now.ctime())
+
 
 if __name__ == '__main__':
     VCAP_APP_PORT = os.getenv('VCAP_APP_PORT')
